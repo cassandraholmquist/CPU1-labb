@@ -1,26 +1,37 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet } from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Fingers crossed!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import HomeScreen from "./src/components/HomeScreen";
+import ToggleButton from "./src/components/ToggleButton";
+import Container from "./src/styles/Container";
+
+import { ThemeContextProvider } from "./src/contexts/ThemeContext";
+
+function App() {
+	return (
+		<ThemeContextProvider>
+			<Container>
+				<ToggleButton />
+				<HomeScreen />
+			</Container>
+		</ThemeContextProvider>
+	);
 }
 
+export default App;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		paddingVertical: 40,
+		paddingHorizontal: 20,
+	},
 });
 
-
+// TODO
 // View, Text, Image, Pressable (eller liknande), ScrollView (eller FlatList)
 // 3 egna komponenter varav minst en med props och minst en av dessa props ska vara en funktion (callback)
-// Använd dig av Context för att skicka ner viss data till komponenter utan att använda props. 
+// Använd dig av Context för att skicka ner viss data till komponenter utan att använda props.
+// https://api.punkapi.com/v2/beers
