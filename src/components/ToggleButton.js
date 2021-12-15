@@ -9,7 +9,9 @@ const ToggleButton = () => {
 
 	return (
 		<Pressable onPress={() => toggleTheme()} style={styles.button}>
-			<Text>{theme === "Dark" ? "Light mode" : "Dark mode"}</Text>
+			<Text style={styles.buttonText}>
+				{theme === "Dark" ? "Light mode" : "Dark mode"}
+			</Text>
 		</Pressable>
 	);
 };
@@ -21,9 +23,12 @@ const styles = StyleSheet.create({
 		margin: 10,
 		padding: 10,
 		borderColor: "grey",
-		borderWidth: 3,
+		borderWidth: 2,
 		borderRadius: 20,
 		backgroundColor: "snow",
-		alignSelf: "center",
+		alignSelf: "flex-end",
+	},
+	buttonText: {
+		fontSize: 10,
 	},
 });

@@ -29,9 +29,3 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 20,
 	},
 });
-
-// TODO
-// View, Text, Image, Pressable (eller liknande), ScrollView (eller FlatList)
-// 3 egna komponenter varav minst en med props och minst en av dessa props ska vara en funktion (callback)
-// Använd dig av Context för att skicka ner viss data till komponenter utan att använda props.
-// https://api.punkapi.com/v2/beers

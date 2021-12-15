@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default ({ children, style }) => {
+export default ({ children }) => {
 	const { theme } = useContext(ThemeContext);
 
 	return (

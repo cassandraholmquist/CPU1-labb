@@ -3,17 +3,17 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { ThemeContext } from "../contexts/ThemeContext";
 
-const Title = ({ text }) => {
+const TextValue = ({ text }) => {
 	const { theme } = useContext(ThemeContext);
 
 	return (
 		<View style={styles.container}>
-			<Text style={[styles.text, styles[`text${theme}`]]}>{text}</Text>
+			<Text style={[(styles.text, styles[`text${theme}`])]}>{text}</Text>
 		</View>
 	);
 };
 
-export default Title;
+export default TextValue;
 
 const styles = StyleSheet.create({
 	container: {
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		color: "black",
-		fontSize: 20,
 	},
 	textDark: {
 		color: "snow",
